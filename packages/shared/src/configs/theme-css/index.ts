@@ -50,6 +50,32 @@ export const themeMap = {
   wechatFormat: wechatFormatCSS,
 } as const
 
+/**
+ * Accent color for fixed-color themes (migrated from markdown-nice).
+ * These themes have their own identity colors; --md-primary-color should
+ * match the theme's accent rather than the user's color picker choice.
+ */
+export const themeAccentColor: Partial<Record<keyof typeof themeMap, string>> = {
+  blue: `hsl(216, 100%, 68%)`,
+  blueCyan: `#009688`,
+  blueMountain: `#3c70c6`,
+  cuteGreen: `#48b378`,
+  cyan: `#47c1a8`,
+  extremeBlack: `#000`,
+  fullStackBlue: `#40B8FA`,
+  geekBlack: `#212122`,
+  green: `#35b378`,
+  ink: `#5c5c5c`,
+  nightPurple: `#916dd5`,
+  orangeHeart: `#ef7060`,
+  purple: `#773098`,
+  red: `#f83929`,
+  rose: `#DEC6FB`,
+  scienceBlue: `#0e88eb`,
+  shanchui: `#ffb11b`,
+  wechatFormat: `#ff3502`,
+}
+
 export type BuiltinThemeName = keyof typeof themeMap
 
 /** Built-in theme id, or marketplace theme key (`mp:<id>`). */

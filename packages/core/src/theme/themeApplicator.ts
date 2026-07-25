@@ -2,7 +2,7 @@
 
 import type { BuiltinThemeName } from '@md/shared/configs'
 import type { CSSVariableConfig } from './cssVariables'
-import { baseCSSContent, isBuiltinThemeName, themeMap } from '@md/shared/configs'
+import { baseCSSContent, isBuiltinThemeName, themeAccentColor, themeMap } from '@md/shared/configs'
 import { processCSS } from './cssProcessor'
 import { wrapCSSWithScope } from './cssScopeWrapper'
 import { generateCSSVariables, generateHeadingStyles } from './cssVariables'
@@ -32,7 +32,18 @@ function resolveThemeCSS(themeName: string, themeCSS?: string): string {
 }
 
 export async function applyTheme(config: ThemeConfig): Promise<void> {
-  const variablesCSS = generateCSSVariables(config.variables)
+  // Fixed-color themes (migrated from markdown-nice) use their own accent
+  // color instead of the user's primary color picker choice
+  const accentColor = isBuiltinThemeName(config.themeName)
+    ? themeAccentColor[config.themeName as BuiltinThemeName]
+    : undefined
+
+  const effectivePrimaryColor = accentColor ?? config.variables.primaryColor
+
+  const variablesCSS = generateCSSVariables({
+    ...config.variables,
+    primaryColor: effectivePrimaryColor,
+  })
 
   const themeCSS = resolveThemeCSS(config.themeName, config.themeCSS)
   const scopedThemeCSS = wrapCSSWithScope(themeCSS, `#output`)

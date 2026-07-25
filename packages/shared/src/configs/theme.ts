@@ -5,6 +5,7 @@ export {
   baseCSSContent,
   type BuiltinThemeName,
   isBuiltinThemeName,
+  themeAccentColor,
   themeMap,
   type ThemeName,
 } from './theme-css'

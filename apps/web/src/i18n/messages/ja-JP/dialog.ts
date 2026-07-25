@@ -286,4 +286,8 @@ export default {
     },
     export: `印刷 / PDF として保存`,
   },
+  cover: {
+    title: `カバーメーカー`,
+    description: `複数のテーマとアスペクト比で記事のカバー画像を生成`,
+  },
 }

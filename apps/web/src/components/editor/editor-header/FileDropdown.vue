@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Cloud, Download, FileCode, FileCog, FileText, FolderKanban, FolderOpen, Package, Settings, Share2, Upload } from '@lucide/vue'
+import { Cloud, Download, FileCode, FileCog, FileText, FolderKanban, FolderOpen, Image, Package, Settings, Share2, Upload } from '@lucide/vue'
 import { isShareUiEnabled } from '@/services/share/client'
 import { isSyncUiEnabled } from '@/services/sync/client'
 import { useEditorStore } from '@/stores/editor'
@@ -20,7 +20,7 @@ const exportStore = useExportStore()
 const uiStore = useUIStore()
 
 const { isOpenPostSlider, isOpenFolderPanel } = storeToRefs(uiStore)
-const { toggleShowTemplateDialog, toggleShowImportMdDialog, toggleShowSyncDialog, toggleShowEditorStateDialog, toggleShowPreferencesDialog, openShareDialog, openPdfExportDialog } = uiStore
+const { toggleShowTemplateDialog, toggleShowImportMdDialog, toggleShowSyncDialog, toggleShowEditorStateDialog, toggleShowPreferencesDialog, toggleShowCoverDialog, openShareDialog, openPdfExportDialog } = uiStore
 const showSyncUi = isSyncUiEnabled()
 const showShareUi = isShareUiEnabled()
 
@@ -34,6 +34,10 @@ function openPreferencesDialog() {
 
 function openTemplateDialog() {
   toggleShowTemplateDialog(true)
+}
+
+function openCoverDialog() {
+  toggleShowCoverDialog(true)
 }
 
 function exportEditorContent2HTML() {
@@ -119,6 +123,11 @@ function exportEditorContent2PDF() {
       <MenubarItem @click="openTemplateDialog()">
         <Package class="mr-2 size-4" />
         {{ t('menu.templateManage') }}
+      </MenubarItem>
+
+      <MenubarItem @click="openCoverDialog()">
+        <Image class="mr-2 size-4" />
+        {{ t('menu.coverMaker') }}
       </MenubarItem>
 
       <MenubarItem @click="isOpenPostSlider = !isOpenPostSlider">
@@ -213,6 +222,11 @@ function exportEditorContent2PDF() {
       <MenubarItem @click="openTemplateDialog()">
         <Package class="mr-2 size-4" />
         {{ t('menu.templateManage') }}
+      </MenubarItem>
+
+      <MenubarItem @click="openCoverDialog()">
+        <Image class="mr-2 size-4" />
+        {{ t('menu.coverMaker') }}
       </MenubarItem>
 
       <MenubarItem @click="isOpenPostSlider = !isOpenPostSlider">

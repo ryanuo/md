@@ -105,6 +105,7 @@ export default {
     exportPdf: `PDF`,
     exportPng: `PNG`,
     templateManage: `テンプレート`,
+    coverMaker: `カバーメーカー`,
     marketplace: `コミュニティテーマ`,
     contentManage: `コンテンツ`,
     cloudSync: `同期`,

@@ -286,4 +286,8 @@ export default {
     },
     export: `Print / Save as PDF`,
   },
+  cover: {
+    title: `Cover Maker`,
+    description: `Generate article cover images with multiple themes and aspect ratios`,
+  },
 }

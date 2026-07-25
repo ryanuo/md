@@ -99,6 +99,9 @@ export const useUIStore = defineStore(`ui`, () => {
   const isShowTemplateDialog = ref(false)
   const toggleShowTemplateDialog = useToggle(isShowTemplateDialog)
 
+  const isShowCoverDialog = ref(false)
+  const toggleShowCoverDialog = useToggle(isShowCoverDialog)
+
   const isShowComponentDialog = ref(false)
   const toggleShowComponentDialog = useToggle(isShowComponentDialog)
 
@@ -262,6 +265,8 @@ export const useUIStore = defineStore(`ui`, () => {
     localImageUploadData,
     isShowTemplateDialog,
     toggleShowTemplateDialog,
+    isShowCoverDialog,
+    toggleShowCoverDialog,
     isShowComponentDialog,
     toggleShowComponentDialog,
     isShowMarketplaceDialog,

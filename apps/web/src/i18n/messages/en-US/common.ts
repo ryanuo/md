@@ -105,6 +105,7 @@ export default {
     exportPdf: `PDF`,
     exportPng: `PNG`,
     templateManage: `Templates`,
+    coverMaker: `Cover Maker`,
     marketplace: `Community Themes`,
     contentManage: `Content`,
     cloudSync: `Sync`,

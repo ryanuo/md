@@ -105,6 +105,7 @@ export default {
     exportPdf: `PDF 文件`,
     exportPng: `PNG 圖片`,
     templateManage: `範本管理`,
+    coverMaker: `封面生成`,
     marketplace: `社群主題`,
     contentManage: `內容管理`,
     cloudSync: `雲端同步`,

@@ -286,4 +286,8 @@ export default {
     },
     export: `打印 / 另存为 PDF`,
   },
+  cover: {
+    title: `封面生成器`,
+    description: `生成文章封面图，支持多种主题和比例`,
+  },
 }
