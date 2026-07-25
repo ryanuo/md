@@ -60,7 +60,7 @@ function onClose() {
       </DialogHeader>
       <iframe
         ref="iframeRef"
-        src="/md/cover.html"
+        src="/cover.html"
         class="w-full h-full border-none rounded-b-lg"
         :title="t('cover.title')"
         @load="onIframeLoad"
