@@ -2687,11 +2687,14 @@
       }
 
       function getPresetContent(preset) {
+        const raw = localStorage.getItem('cover-state')
+        const state = raw ? JSON.parse(raw) : {}
+        const saved = state.content || {}
         return {
-          label: DEFAULT.label,
-          title: DEFAULT.title,
-          subtitle: DEFAULT.subtitle,
-          author: DEFAULT.author,
+          label: saved.label || DEFAULT.label,
+          title: saved.title || DEFAULT.title,
+          subtitle: saved.subtitle || DEFAULT.subtitle,
+          author: saved.author || DEFAULT.author,
           ...(preset.content || {}),
         }
       }

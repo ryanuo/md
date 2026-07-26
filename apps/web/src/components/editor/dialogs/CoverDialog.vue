@@ -53,7 +53,7 @@ function onClose() {
 
 <template>
   <Dialog :open="open" @update:open="onClose">
-    <DialogContent class="!max-w-[98vw] sm:!max-w-[98vw] w-[1400px] h-[90vh] p-0 gap-0">
+    <DialogContent class="!max-w-[98vw] sm:!max-w-[98vw] w-[1400px] h-[90vh] pt-10 pb-0 px-0 gap-0">
       <DialogHeader class="sr-only">
         <DialogTitle>{{ t('cover.title') }}</DialogTitle>
         <DialogDescription>{{ t('cover.description') }}</DialogDescription>
