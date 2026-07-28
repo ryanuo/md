@@ -192,9 +192,12 @@ export default {
   },
   styleOptions: {
     theme: {
-      default: { label: `经典`, desc: `` },
-      grace: { label: `优雅`, desc: `{'@'}brzhang` },
-      simple: { label: `简洁`, desc: `{'@'}okooo5km` },
+      'default': { label: `经典`, desc: `` },
+      'grace': { label: `优雅`, desc: `{'@'}brzhang` },
+      'simple': { label: `简洁`, desc: `{'@'}okooo5km` },
+      'autumn-warm': { label: `秋日暖光`, desc: `{'@'}yanglbme` },
+      'spring-fresh': { label: `春日清新`, desc: `{'@'}yanglbme` },
+      'ocean-calm': { label: `深海静谧`, desc: `{'@'}yanglbme` },
     },
     fontFamily: {
       sansSerif: { label: `无衬线`, desc: `字体123Abc` },

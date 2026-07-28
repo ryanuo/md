@@ -192,9 +192,12 @@ export default {
   },
   styleOptions: {
     theme: {
-      default: { label: `クラシック`, desc: `` },
-      grace: { label: `Grace`, desc: `{'@'}brzhang` },
-      simple: { label: `シンプル`, desc: `{'@'}okooo5km` },
+      'default': { label: `クラシック`, desc: `` },
+      'grace': { label: `Grace`, desc: `{'@'}brzhang` },
+      'simple': { label: `シンプル`, desc: `{'@'}okooo5km` },
+      'autumn-warm': { label: `秋の温もり`, desc: `{'@'}yanglbme` },
+      'spring-fresh': { label: `春のさわやか`, desc: `{'@'}yanglbme` },
+      'ocean-calm': { label: `海の静寂`, desc: `{'@'}yanglbme` },
     },
     fontFamily: {
       sansSerif: { label: `ゴシック`, desc: `Font123Abc` },

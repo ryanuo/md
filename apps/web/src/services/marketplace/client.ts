@@ -11,6 +11,7 @@ import type {
 import { t } from '@/i18n/translate'
 import { ApiError, MdApiClient } from '@/services/account/client'
 import { isAccountConfigured } from '@/services/account/config'
+import { getMockThemeById, getMockThemes } from './mock-themes'
 
 export function isMarketplaceConfigured(): boolean {
   return isAccountConfigured()
@@ -92,8 +93,8 @@ function toQuery(params: MarketplaceListParams = {}): string {
 }
 
 export class MarketplaceClient extends MdApiClient {
-  listThemes(params?: MarketplaceListParams): Promise<MarketplaceListResponse> {
-    return this.request<MarketplaceListResponse>(`GET`, `/marketplace/themes${toQuery(params)}`)
+  listThemes(_params?: MarketplaceListParams): Promise<MarketplaceListResponse> {
+    return Promise.resolve(getMockThemes())
   }
 
   listComponents(params?: MarketplaceListParams): Promise<MarketplaceListResponse> {
@@ -101,10 +102,16 @@ export class MarketplaceClient extends MdApiClient {
   }
 
   get(id: string): Promise<MarketplaceItemDetail> {
+    const mock = getMockThemeById(id)
+    if (mock)
+      return Promise.resolve(mock)
     return this.request<MarketplaceItemDetail>(`GET`, `/marketplace/${id}`)
   }
 
   install(id: string): Promise<MarketplaceItemDetail> {
+    const mock = getMockThemeById(id)
+    if (mock)
+      return Promise.resolve(mock)
     return this.request<MarketplaceItemDetail>(`POST`, `/marketplace/${id}/install`)
   }
 
