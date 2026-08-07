@@ -319,6 +319,153 @@ th { color: #fff; background-color: var(--md-primary-color); font-weight: bold; 
 td { color: hsl(var(--foreground)); border: 1px solid #d5dde5; padding: 0.45em 0.75em; }`,
     sampleMarkdown: null,
   },
+  {
+    id: `28b4dc95-2145-4923-bc8c-568dce083403`,
+    type: `theme`,
+    slug: `mint-soda`,
+    name: `薄荷气泡`,
+    description: `虚线、胶囊与薄荷绿，夏天的透气感。建议主色 #2fbf9b。`,
+    version: `1.0.1`,
+    coverUrl: null,
+    primaryColor: `#2fbf9b`,
+    status: `approved`,
+    downloadCount: 110,
+    createdAt: 1784281027227,
+    updatedAt: 1784285982309,
+    publishedAt: 1784281027227,
+    author: MOCK_AUTHOR,
+    payload: `/**
+* Mint Soda — mint bubbles and summer breeze.
+* Dashed underlines, rounded capsules & mint green.
+* Use var(--md-primary-color); suggested accent #2fbf9b.
+*/
+
+.container {
+  font-family: 'Yuanti SC', 'YouYuan', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif !important;
+}
+
+h1 {
+  display: block;
+  padding: 0;
+  margin: 1.2em 8px 0.6em;
+  color: color-mix(in srgb, var(--md-primary-color) 55%, #000 45%);
+  background: transparent;
+  border-bottom: none;
+  font-size: calc(var(--md-font-size) * 1.5);
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.6;
+}
+
+h2 {
+  display: block;
+  padding: 0 0 0.5em;
+  margin: 2.2em 8px 1.1em;
+  color: color-mix(in srgb, var(--md-primary-color) 55%, #000 45%);
+  background: transparent;
+  border-bottom: 2px dotted color-mix(in srgb, var(--md-primary-color) 45%, #fff 55%);
+  border-radius: 0;
+  font-size: calc(var(--md-font-size) * 1.15);
+  font-weight: 700;
+  text-align: left;
+  box-shadow: none;
+}
+
+h3 {
+  padding: 0.2em 0 0.2em 12px;
+  margin: 1.8em 8px 0.7em 0;
+  color: color-mix(in srgb, var(--md-primary-color) 60%, #000 40%);
+  border-left: 4px solid var(--md-primary-color);
+  border-radius: 0 10px 10px 0;
+  background: color-mix(in srgb, var(--md-primary-color) 6%, transparent);
+  font-size: calc(var(--md-font-size) * 1.08);
+  line-height: 1.5;
+}
+
+h4, h5, h6 { color: var(--md-primary-color); }
+
+p { letter-spacing: 0.04em; line-height: 1.8; }
+
+blockquote {
+  font-style: normal;
+  padding: 1em 1.2em;
+  border-left: none;
+  border-radius: 18px;
+  background: color-mix(in srgb, var(--md-primary-color) 12%, transparent);
+  color: color-mix(in srgb, var(--md-primary-color) 45%, #000 55%);
+  font-size: 0.95em;
+  line-height: 1.8;
+}
+
+blockquote > p { letter-spacing: 0.04em; }
+
+strong { color: color-mix(in srgb, var(--md-primary-color) 55%, #000 45%); }
+
+em { font-style: normal; color: color-mix(in srgb, var(--md-primary-color) 65%, #fff 35%); }
+
+s { color: color-mix(in srgb, var(--md-primary-color) 45%, #fff 55%); }
+
+mark {
+  background-color: color-mix(in srgb, var(--md-primary-color) 25%, transparent);
+  color: color-mix(in srgb, var(--md-primary-color) 55%, #000 45%);
+  padding: 0 4px;
+  border-radius: 6px;
+}
+
+a {
+  color: var(--md-primary-color);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--md-primary-color) 45%, #fff 55%);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  margin: 1.4em auto;
+  border-radius: 4px;
+  box-shadow: 0 8px 20px color-mix(in srgb, var(--md-primary-color) 15%, transparent);
+}
+
+ul { list-style: disc; }
+li { margin: 0.45em 8px; }
+
+hr {
+  width: 56px;
+  height: 3px;
+  border: none;
+  border-radius: 2px;
+  margin: 2.6em auto;
+  background: linear-gradient(90deg, var(--md-primary-color), color-mix(in srgb, var(--md-primary-color) 45%, #fff 55%));
+  -webkit-transform: none;
+  transform: none;
+}
+
+.codespan {
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--md-primary-color) 12%, transparent);
+  color: color-mix(in srgb, var(--md-primary-color) 55%, #000 45%);
+  border: 1px solid color-mix(in srgb, var(--md-primary-color) 15%, transparent);
+}
+
+pre.code__pre, .hljs.code__pre {
+  border-radius: 14px;
+  border: 1px solid color-mix(in srgb, var(--md-primary-color) 12%, transparent);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
+}
+
+table { border-collapse: collapse; width: 100%; margin: 1em 8px; border: 1px solid color-mix(in srgb, var(--md-primary-color) 28%, #fff 72%); }
+th {
+  color: color-mix(in srgb, var(--md-primary-color) 55%, #000 45%);
+  background-color: color-mix(in srgb, var(--md-primary-color) 12%, transparent);
+  font-weight: bold;
+  border: 1px solid color-mix(in srgb, var(--md-primary-color) 28%, #fff 72%);
+  padding: 0.45em 0.75em;
+  text-align: left;
+}
+td { color: hsl(var(--foreground)); border: 1px solid color-mix(in srgb, var(--md-primary-color) 28%, #fff 72%); padding: 0.45em 0.75em; }`,
+    sampleMarkdown: null,
+  },
 ]
 
 export function getMockThemes(): MarketplaceListResponse {
