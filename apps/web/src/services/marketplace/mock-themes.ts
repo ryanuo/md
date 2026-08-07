@@ -340,10 +340,6 @@ td { color: hsl(var(--foreground)); border: 1px solid #d5dde5; padding: 0.45em 0
 * Use var(--md-primary-color); suggested accent #2fbf9b.
 */
 
-.container {
-  font-family: 'Yuanti SC', 'YouYuan', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif !important;
-}
-
 h1 {
   display: block;
   padding: 0;
