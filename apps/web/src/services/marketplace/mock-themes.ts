@@ -462,6 +462,676 @@ th {
 td { color: hsl(var(--foreground)); border: 1px solid color-mix(in srgb, var(--md-primary-color) 28%, #fff 72%); padding: 0.45em 0.75em; }`,
     sampleMarkdown: null,
   },
+  {
+    id: `fbf7c7ed-092d-479e-ae70-53d566657ec3`,
+    type: `theme`,
+    slug: `swiss-index`,
+    name: `瑞士索引`,
+    description: `黑白网格、信号红与巨型编号，把教程和观点组织成清晰索引。建议主色 #e00019。`,
+    version: `1.0.1`,
+    coverUrl: null,
+    primaryColor: `#e00019`,
+    status: `approved`,
+    downloadCount: 95,
+    createdAt: 1784367427227,
+    updatedAt: 1784372782309,
+    publishedAt: 1784367427227,
+    author: MOCK_AUTHOR,
+    payload: `/**
+* Swiss Index — black & white grid, signal red, giant numerals.
+* Use var(--md-primary-color); suggested accent #e00019.
+*/
+
+.container {
+  counter-reset: swiss-h2;
+  letter-spacing: 0;
+  color: #111111;
+}
+
+h1 {
+  display: block;
+  padding: 0 0 0.42em;
+  margin: 0.8em 8px 0.55em;
+  color: #050505;
+  background: transparent;
+  border-bottom: 2px solid #0a0a0a;
+  border-radius: 0;
+  font-size: calc(var(--md-font-size) * 2.3);
+  font-weight: 900;
+  text-align: left;
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+  box-shadow: none;
+}
+
+h1::before {
+  content: 'SWISS INDEX / 01';
+  display: block;
+  color: var(--md-primary-color);
+  font-family: Menlo, Consolas, monospace;
+  font-size: 0.25em;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.4em;
+}
+
+h2 {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.72em;
+  padding: 0.65em 0 0;
+  margin: 2.15em 8px 0.85em;
+  color: #0a0a0a;
+  background: transparent;
+  border-top: 1px solid #111111;
+  border-bottom: none;
+  border-radius: 0;
+  font-size: calc(var(--md-font-size) * 1.38);
+  font-weight: 800;
+  text-align: left;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  box-shadow: none;
+}
+
+h2::before {
+  content: counter(swiss-h2);
+  counter-increment: swiss-h2;
+  flex: 0 0 auto;
+  color: #050505;
+  font-size: 2.35em;
+  font-weight: 900;
+  line-height: 0.78;
+  letter-spacing: -0.08em;
+}
+
+h3 {
+  padding: 0 0 0 0.72em;
+  margin: 1.7em 8px 0.65em;
+  color: #111111;
+  border-left: 5px solid var(--md-primary-color);
+  border-radius: 0;
+  background: transparent;
+  font-size: calc(var(--md-font-size) * 1.08);
+  font-weight: 800;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+}
+
+h4 {
+  margin: 1.45em 8px 0.55em;
+  color: var(--md-primary-color);
+  font-size: calc(var(--md-font-size) * 0.96);
+  font-weight: 800;
+  line-height: 1.4;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+h5 {
+  margin: 1.35em 8px 0.5em;
+  color: #111111;
+  font-size: calc(var(--md-font-size) * 0.9);
+  font-weight: 700;
+  line-height: 1.45;
+  letter-spacing: 0.03em;
+}
+
+h6 {
+  margin: 1.25em 8px 0.45em;
+  color: #686868;
+  font-size: calc(var(--md-font-size) * 0.78);
+  font-weight: 700;
+  line-height: 1.45;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+p { margin: 0 8px 1.18em; line-height: 1.82; text-align: left; letter-spacing: 0; }
+
+blockquote {
+  font-style: normal;
+  padding: 0.2em 0 0.2em 1em;
+  margin: 1.65em 8px;
+  border-left: 3px solid var(--md-primary-color);
+  border-radius: 0;
+  background: transparent;
+  color: #333333;
+  font-size: 0.94em;
+  line-height: 1.75;
+}
+
+blockquote > p { margin: 0; letter-spacing: 0; }
+
+ul { list-style-type: square; padding-left: 1.45em; margin: 0.85em 8px 1.35em; }
+ol { list-style-type: decimal-leading-zero; padding-left: 1.75em; margin: 0.85em 8px 1.35em; }
+li { margin: 0.48em 0; padding-left: 0.25em; }
+
+a {
+  color: #111111;
+  text-decoration: none;
+  border-bottom: 2px solid var(--md-primary-color);
+  padding-bottom: 1px;
+}
+
+strong {
+  color: #050505;
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-color: var(--md-primary-color);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+
+em { font-style: italic; color: #333333; }
+s { color: #8c8c8c; text-decoration-color: var(--md-primary-color); }
+
+mark {
+  background-color: var(--md-primary-color);
+  color: #ffffff;
+  padding: 1px 4px;
+  border-radius: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  margin: 1.35em auto;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+hr {
+  border: none;
+  border-top: 2px solid #111111;
+  margin: 2.2em 8px;
+  height: auto;
+  -webkit-transform: none;
+  transform: none;
+}
+
+.codespan {
+  font-family: Menlo, Consolas, 'Courier New', monospace;
+  font-size: 0.82em;
+  background-color: #eeeeee;
+  color: #111111;
+  padding: 2px 5px;
+  border-radius: 0;
+  border-bottom: 2px solid var(--md-primary-color);
+}
+
+pre.code__pre, .hljs.code__pre {
+  background-color: #f1f1f1;
+  border: 1px solid #d8d8d8;
+  border-radius: 0;
+  margin: 1.45em 8px;
+  overflow: hidden;
+  box-shadow: none;
+}
+
+pre.code__pre > code, .hljs.code__pre > code { color: #1b1b1b; }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 520px;
+  margin: 1.45em 8px;
+  font-size: 0.82em;
+  line-height: 1.45;
+  border-top: 2px solid #111111;
+  border-bottom: 1px solid #111111;
+}
+
+th {
+  border: none;
+  border-bottom: 1px solid #111111;
+  padding: 9px 8px 7px;
+  background-color: transparent;
+  color: #111111;
+  font-weight: 800;
+  text-align: left;
+}
+
+td {
+  border: none;
+  border-bottom: 1px solid #d8d8d8;
+  padding: 8px;
+  color: #222222;
+}`,
+    sampleMarkdown: null,
+  },
+  {
+    id: `596a3720-8168-40cc-9dea-558ad598e685`,
+    type: `theme`,
+    slug: `cyan-scape`,
+    name: `青绿山水`,
+    description: `青绿渐变的山脊标题块，当代古典的矿物色。建议主色 #2f6f6a。`,
+    version: `1.0.1`,
+    coverUrl: null,
+    primaryColor: `#2f6f6a`,
+    status: `approved`,
+    downloadCount: 92,
+    createdAt: 1784368427227,
+    updatedAt: 1784373782309,
+    publishedAt: 1784368427227,
+    author: MOCK_AUTHOR,
+    payload: `/**
+* Cyan Scape — mineral teal, ridge-gradient headings.
+* Use var(--md-primary-color); suggested accent #2f6f6a.
+*/
+
+.container {
+  letter-spacing: 0;
+}
+
+h1 {
+  display: block;
+  padding: 0;
+  margin: 1em 8px 0.5em;
+  color: var(--md-primary-color);
+  background: transparent;
+  border-bottom: none;
+  border-radius: 0;
+  font-size: calc(var(--md-font-size) * 1.55);
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.7;
+  letter-spacing: 0.12em;
+  box-shadow: none;
+}
+
+h1::before {
+  content: '千里江山';
+  display: block;
+  font-size: 0.42em;
+  font-weight: 400;
+  color: #7fb5a2;
+  letter-spacing: 0.45em;
+  margin-bottom: 2.2em;
+  text-align: center;
+}
+
+h2 {
+  display: inline-block;
+  padding: 0.45em 1.15em;
+  margin: 2.4em 8px 1.3em;
+  color: #ffffff;
+  background-color: var(--md-primary-color);
+  background-image: linear-gradient(120deg, var(--md-primary-color), #5fa092);
+  border: none;
+  border-radius: 4px 18px 4px 18px;
+  font-size: calc(var(--md-font-size) * 1.1);
+  font-weight: 700;
+  text-align: left;
+  line-height: 1.6;
+  letter-spacing: 0.08em;
+  box-shadow: none;
+}
+
+blockquote {
+  font-style: normal;
+  padding: 0.9em 1.2em;
+  margin: 1.8em 8px;
+  border-left: 3px solid #7fb5a2;
+  border-radius: 0 12px 12px 0;
+  background-color: #eef4f1;
+  color: #5a7269;
+  font-size: 0.94em;
+  line-height: 2;
+}
+
+blockquote > p { margin: 0; }
+
+strong { font-weight: 700; color: var(--md-primary-color); }
+em { font-style: italic; color: #5a7269; }
+s { color: #7a948b; }
+
+mark {
+  background-color: #d4e7df;
+  color: var(--md-primary-color);
+  padding: 0 2px;
+}
+
+a {
+  color: var(--md-primary-color);
+  text-decoration: none;
+  border-bottom: 1px solid #7fb5a2;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  margin: 1.4em auto;
+  border-radius: 4px 18px 4px 18px;
+  box-shadow: none;
+}
+
+hr {
+  border: none;
+  width: 60px;
+  height: 3px;
+  border-radius: 2px;
+  margin: 2.6em auto;
+  background-color: #5fa092;
+  background-image: linear-gradient(90deg, var(--md-primary-color), #7fb5a2);
+  -webkit-transform: none;
+  transform: none;
+}
+
+.codespan {
+  font-family: Menlo, Consolas, 'Courier New', monospace;
+  font-size: 0.86em;
+  background-color: #eef4f1;
+  color: var(--md-primary-color);
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: none;
+}
+
+th {
+  border: 1px solid #cfe0d8;
+  padding: 8px 12px;
+  background-color: var(--md-primary-color);
+  color: #ffffff;
+  font-weight: 700;
+  text-align: left;
+}
+
+td {
+  border: 1px solid #cfe0d8;
+  padding: 8px 12px;
+  color: #222222;
+}`,
+    sampleMarkdown: null,
+  },
+  {
+    id: `5eb84663-3a24-4003-be24-fa1aab976014`,
+    type: `theme`,
+    slug: `mori-journal`,
+    name: `森系手帐`,
+    description: `和纸胶带标题与拍立得照片框，慢生活手帐。建议主色 #3a6b4f。`,
+    version: `1.0.1`,
+    coverUrl: null,
+    primaryColor: `#3a6b4f`,
+    status: `approved`,
+    downloadCount: 90,
+    createdAt: 1784369427227,
+    updatedAt: 1784374782309,
+    publishedAt: 1784369427227,
+    author: MOCK_AUTHOR,
+    payload: `/**
+* Mori Journal — washi-tape headings and polaroid frames.
+* Use var(--md-primary-color); suggested accent #3a6b4f.
+*/
+
+.container {
+  line-height: 1.9;
+  letter-spacing: 0.02em;
+  color: #45503f;
+  background-color: #f7f5ef;
+  padding: 20px 18px 32px;
+}
+
+h1 {
+  display: block;
+  padding: 0;
+  margin: 1.2em 8px 0.5em;
+  color: var(--md-primary-color);
+  background: transparent;
+  border-bottom: none;
+  border-radius: 0;
+  font-size: calc(var(--md-font-size) * 1.45);
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.7;
+  letter-spacing: 0;
+  box-shadow: none;
+}
+
+h2 {
+  display: inline-block;
+  padding: 0.3em 0.9em;
+  margin: 2.2em 8px 1.2em;
+  color: var(--md-primary-color);
+  background-color: color-mix(in srgb, var(--md-primary-color) 16%, transparent);
+  border: none;
+  border-radius: 3px;
+  font-size: calc(var(--md-font-size) * 1.1);
+  font-weight: 600;
+  text-align: left;
+  line-height: 1.6;
+  letter-spacing: 0;
+  box-shadow: none;
+}
+
+blockquote {
+  font-style: normal;
+  padding: 0.9em 1.1em;
+  margin: 1.8em 8px;
+  border-left: 3px solid #8db39a;
+  border-radius: 0 8px 8px 0;
+  background-color: color-mix(in srgb, var(--md-primary-color) 8%, #ffffff);
+  color: #6b7f6d;
+  font-size: 0.94em;
+  line-height: 1.9;
+}
+
+blockquote > p { margin: 0; }
+
+strong { font-weight: 700; color: var(--md-primary-color); }
+em { font-style: normal; color: #93a08d; }
+s { color: #a3a58d; }
+
+mark {
+  background-color: color-mix(in srgb, var(--md-primary-color) 16%, #ffffff);
+  color: var(--md-primary-color);
+  padding: 0 3px;
+  border-radius: 3px;
+}
+
+a {
+  color: var(--md-primary-color);
+  text-decoration: none;
+  border-bottom: 1px dashed #8db39a;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 10px 10px 30px;
+  margin: 1.6em auto;
+  background-color: #ffffff;
+  border: 1px solid #e3dccb;
+  border-radius: 0;
+  box-shadow: 0 6px 16px rgba(90, 80, 60, 0.12);
+}
+
+hr {
+  border: none;
+  margin: 2.4em 8px;
+  height: auto;
+  -webkit-transform: none;
+  transform: none;
+  text-align: center;
+}
+
+hr::after {
+  content: '❀';
+  display: block;
+  color: #8db39a;
+  font-size: 1em;
+  line-height: 1;
+}
+
+.codespan {
+  font-family: Menlo, Consolas, 'Courier New', monospace;
+  font-size: 0.86em;
+  background-color: color-mix(in srgb, var(--md-primary-color) 8%, #ffffff);
+  color: var(--md-primary-color);
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: none;
+}
+
+th {
+  border: 1px solid color-mix(in srgb, var(--md-primary-color) 25%, #ffffff);
+  padding: 8px 12px;
+  background-color: color-mix(in srgb, var(--md-primary-color) 16%, #ffffff);
+  color: var(--md-primary-color);
+  font-weight: 700;
+  text-align: left;
+}
+
+td {
+  border: 1px solid color-mix(in srgb, var(--md-primary-color) 25%, #ffffff);
+  padding: 8px 12px;
+  color: #45503f;
+}`,
+    sampleMarkdown: null,
+  },
+  {
+    id: `95b66bb1-c19f-47c4-9796-97d04794894c`,
+    type: `theme`,
+    slug: `lemon-sea`,
+    name: `柠檬海盐`,
+    description: `柠檬荧光笔扫过的标题与强调，海风般明亮。建议主色 #f5c518。`,
+    version: `1.0.1`,
+    coverUrl: null,
+    primaryColor: `#f5c518`,
+    status: `approved`,
+    downloadCount: 93,
+    createdAt: 1784370427227,
+    updatedAt: 1784375782309,
+    publishedAt: 1784370427227,
+    author: MOCK_AUTHOR,
+    payload: `/**
+* Lemon Sea — highlighter sweeps and sea-breeze brightness.
+* Use var(--md-primary-color); suggested accent #f5c518.
+*/
+
+h1 {
+  display: block;
+  padding: 0;
+  margin: 1.2em 8px 0.6em;
+  color: #2f3e46;
+  background: transparent;
+  border-bottom: none;
+  border-radius: 0;
+  font-size: calc(var(--md-font-size) * 1.5);
+  font-weight: 800;
+  text-align: center;
+  line-height: 1.6;
+  letter-spacing: 0;
+  box-shadow: none;
+}
+
+h2 {
+  display: inline-block;
+  padding: 0 4px;
+  margin: 2.2em 8px 1.2em;
+  color: #2f3e46;
+  background-image: linear-gradient(transparent 55%, #ffe27a 55%);
+  border: none;
+  border-radius: 0;
+  font-size: calc(var(--md-font-size) * 1.15);
+  font-weight: 800;
+  text-align: left;
+  line-height: 1.8;
+  letter-spacing: 0;
+  box-shadow: none;
+}
+
+blockquote {
+  font-style: normal;
+  padding: 1em 1.2em;
+  margin: 1.8em 8px;
+  border: 2px dashed var(--md-primary-color);
+  border-radius: 14px;
+  background-color: #f2f7f9;
+  color: #6b7f8c;
+  font-size: 0.94em;
+  line-height: 1.9;
+}
+
+blockquote > p { margin: 0; }
+
+strong {
+  font-weight: 700;
+  color: #2f3e46;
+  background-image: linear-gradient(transparent 60%, #fff3b0 60%);
+  padding: 0 2px;
+}
+
+em { font-style: italic; color: #6b7f8c; }
+s { color: #8fa1ab; }
+
+mark {
+  background-color: #ffe27a;
+  color: #2f3e46;
+  padding: 0 2px;
+}
+
+a {
+  color: #6b7f8c;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px solid var(--md-primary-color);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  margin: 1.3em auto;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(107, 127, 140, 0.18);
+}
+
+hr {
+  border: none;
+  margin: 2.4em 8px;
+  height: auto;
+  -webkit-transform: none;
+  transform: none;
+  text-align: center;
+}
+
+hr::after {
+  content: '● ● ●';
+  display: block;
+  color: var(--md-primary-color);
+  letter-spacing: 0.5em;
+  font-size: 0.75em;
+  line-height: 1;
+}
+
+.codespan {
+  font-family: Menlo, Consolas, 'Courier New', monospace;
+  font-size: 0.86em;
+  background-color: #f2f7f9;
+  color: #2f3e46;
+  padding: 2px 6px;
+  border-radius: 5px;
+  border: none;
+}
+
+th {
+  border: 1px solid #eed88f;
+  padding: 8px 12px;
+  background-color: var(--md-primary-color);
+  color: #2f3e46;
+  font-weight: 700;
+  text-align: left;
+}
+
+td {
+  border: 1px solid #e3e9ed;
+  padding: 8px 12px;
+  color: #2f3e46;
+}`,
+    sampleMarkdown: null,
+  },
 ]
 
 export function getMockThemes(): MarketplaceListResponse {
