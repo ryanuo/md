@@ -43,6 +43,11 @@ export const fontFamilyOptions = [
     value: `Menlo, Monaco, 'Courier New', monospace`,
     desc: `字体123Abc`,
   },
+  {
+    label: `圆体`,
+    value: `'Yuanti SC', 'YouYuan', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif`,
+    desc: `字体123Abc`,
+  },
 ] as const
 
 export const fontSizeOptions = [

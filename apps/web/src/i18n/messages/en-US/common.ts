@@ -203,6 +203,7 @@ export default {
       sansSerif: { label: `Sans`, desc: `Font123Abc` },
       serif: { label: `Serif`, desc: `Font123Abc` },
       monospace: { label: `Mono`, desc: `Font123Abc` },
+      rounded: { label: `Rounded`, desc: `Font123Abc` },
     },
     fontSize: {
       smaller: `XS`,

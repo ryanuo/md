@@ -203,6 +203,7 @@ export default {
       sansSerif: { label: `無襯線`, desc: `字型123Abc` },
       serif: { label: `襯線`, desc: `字型123Abc` },
       monospace: { label: `等寬`, desc: `字型123Abc` },
+      rounded: { label: `圓體`, desc: `字型123Abc` },
     },
     fontSize: {
       smaller: `更小`,

@@ -15,7 +15,7 @@ import { useMarketplaceStore } from '@/stores/marketplace'
 
 type Translate = (key: string) => string
 
-const FONT_FAMILY_KEYS = [`sansSerif`, `serif`, `monospace`] as const
+const FONT_FAMILY_KEYS = [`sansSerif`, `serif`, `monospace`, `rounded`] as const
 const FONT_SIZE_DESC_KEYS = [`smaller`, `slightlySmaller`, `recommended`, `slightlyLarger`, `larger`] as const
 const COLOR_KEYS = [
   `classicBlue`,

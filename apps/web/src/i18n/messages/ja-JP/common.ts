@@ -203,6 +203,7 @@ export default {
       sansSerif: { label: `ゴシック`, desc: `Font123Abc` },
       serif: { label: `明朝`, desc: `Font123Abc` },
       monospace: { label: `等幅`, desc: `Font123Abc` },
+      rounded: { label: `丸ゴシック`, desc: `Font123Abc` },
     },
     fontSize: {
       smaller: `XS`,
