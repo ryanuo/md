@@ -1033,6 +1033,7 @@ h2 {
   margin: 2.2em 8px 1.2em;
   color: #2f3e46;
   background-image: linear-gradient(transparent 55%, #ffe27a 55%);
+  background-color: transparent;
   border: none;
   border-radius: 0;
   font-size: calc(var(--md-font-size) * 1.15);
